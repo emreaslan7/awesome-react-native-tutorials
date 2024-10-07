@@ -10,8 +10,6 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
-import { useColorScheme } from "@/components/useColorScheme";
-
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
@@ -48,6 +46,13 @@ function RootLayoutNav() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="otp"
+        options={{
+          headerTitle: "Enter Your Phone Number",
+          headerBackVisible: false,
+        }}
+      />
     </Stack>
   );
 }
