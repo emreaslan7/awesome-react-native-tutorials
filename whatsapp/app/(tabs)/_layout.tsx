@@ -71,7 +71,7 @@ const TabsLayout = () => {
         />
 
         <Tabs.Screen
-          name="settings/index"
+          name="settings"
           options={{
             title: "Settings",
             tabBarIcon: ({ size, color }) => (
