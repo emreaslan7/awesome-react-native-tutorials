@@ -32,7 +32,7 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
-          name="calls/index"
+          name="calls"
           options={{
             title: "Calls",
             tabBarIcon: ({ size, color }) => (
