@@ -55,7 +55,7 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
-          name="chats/index"
+          name="chats"
           options={{
             title: "Chats",
             tabBarIcon: ({ size, color }) => (
