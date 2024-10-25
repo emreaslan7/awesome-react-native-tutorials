@@ -1,5 +1,5 @@
-// import ChatMessageBox from "@/components/ChatMessageBox";
-// import ReplyMessageBar from "@/components/ReplyMessageBar";
+import ChatMessageBox from "@/components/ChatMessageBox";
+import ReplyMessageBar from "@/components/ReplyMessageBar";
 import Colors from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState, useCallback, useEffect, useRef } from "react";
@@ -197,20 +197,20 @@ const Page = () => {
           </View>
         )}
         renderInputToolbar={renderInputToolbar}
-        // renderChatFooter={() => (
-        //   <ReplyMessageBar
-        //     clearReply={() => setReplyMessage(null)}
-        //     message={replyMessage}
-        //   />
-        // )}
-        // onLongPress={(context, message) => setReplyMessage(message)}
-        // renderMessage={(props) => (
-        //   <ChatMessageBox
-        //     {...props}
-        //     setReplyOnSwipeOpen={setReplyMessage}
-        //     updateRowRef={updateRowRef}
-        //   />
-        // )}
+        renderChatFooter={() => (
+          <ReplyMessageBar
+            clearReply={() => setReplyMessage(null)}
+            message={replyMessage}
+          />
+        )}
+        onLongPress={(context, message) => setReplyMessage(message)}
+        renderMessage={(props) => (
+          <ChatMessageBox
+            {...props}
+            setReplyOnSwipeOpen={setReplyMessage}
+            updateRowRef={updateRowRef}
+          />
+        )}
       />
     </ImageBackground>
   );
